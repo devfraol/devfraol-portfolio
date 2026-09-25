@@ -1,0 +1,962 @@
+# BUILD: DAV FRAOL — EXTROVERTED 3D CREATIVE PORTFOLIO
+
+You are building the flagship personal website for **Dav Fraol**.
+
+This is NOT a conventional portfolio.
+
+This is NOT a corporate website.
+
+This is NOT a simple developer portfolio.
+
+This should feel like an **interactive digital experience** created by a creative technologist, filmmaker, designer, and developer.
+
+The website itself must demonstrate creativity, motion, visual design, 3D interaction, storytelling, and technical ability.
+
+The goal is that someone opens the website and immediately thinks:
+
+**"This is different."**
+
+---
+
+# 01 — THE CREATIVE DIRECTION
+
+The visual identity should be:
+
+**EXTROVERTED**
+**BOLD**
+**CINEMATIC**
+**3D**
+**EXPERIMENTAL**
+**FUTURISTIC**
+**DARK**
+**ELECTRIC BLUE**
+**PLAYFUL**
+**LUXURIOUS**
+**UNEXPECTED**
+
+Think:
+
+* digital art installation
+* futuristic creative studio
+* cinematic title sequence
+* interactive film
+* experimental design portfolio
+* high-end creative developer website
+* futuristic personal brand
+
+Do NOT design a standard portfolio.
+
+Do NOT create a hero with:
+
+"Hi, I'm Dav"
+"Web Developer"
+two buttons
+three cards underneath.
+
+That is exactly what we are trying to avoid.
+
+The design must have personality.
+
+---
+
+# 02 — VISUAL PHILOSOPHY
+
+Use a dark environment as the canvas.
+
+Primary colors:
+
+BLACK
+#030407
+
+DARK NAVY
+#06101D
+
+ELECTRIC BLUE
+#087CFF
+
+BRIGHT BLUE
+#24A8FF
+
+WHITE
+#F5F7FF
+
+Use blue as energetic light rather than simply coloring UI elements blue.
+
+Create:
+
+* blue light trails
+* glowing edges
+* volumetric lighting
+* particles
+* reflections
+* holographic elements
+* depth
+* atmospheric fog
+* subtle noise
+* digital distortion
+* glass
+* metallic surfaces
+
+But use these intentionally.
+
+The website should look expensive, not like a collection of random effects.
+
+---
+
+# 03 — TECHNOLOGY
+
+Use modern web technologies.
+
+Preferred stack:
+
+* React
+* TypeScript
+* Tailwind CSS
+* Three.js
+* React Three Fiber
+* Drei
+* Framer Motion / Motion
+* GSAP where useful
+* Lenis or another smooth-scroll solution
+* Lucide icons
+
+Use WebGL/Three.js for the major 3D experience.
+
+Use CSS and Motion for UI animation.
+
+Do not force everything into Three.js.
+
+---
+
+# 04 — THE HERO MUST BE INSANE
+
+The hero is the most important part of the entire website.
+
+Do NOT create a normal centered hero.
+
+Create a full-screen interactive 3D environment.
+
+Imagine the visitor is entering Dav's digital world.
+
+### Main 3D environment
+
+Create a floating futuristic object / sculpture in the center.
+
+It could combine:
+
+* metallic geometry
+* transparent glass
+* glowing blue edges
+* floating typography
+* particles
+* light trails
+* abstract architectural forms
+
+The object should continuously move.
+
+It should react to:
+
+* mouse movement
+* scrolling
+* cursor position
+
+Use realistic lighting and depth.
+
+The camera should have subtle movement.
+
+---
+
+# 05 — HERO TYPOGRAPHY
+
+Instead of simply placing text in the center, integrate typography into the environment.
+
+Display:
+
+DAV
+FRAOL
+
+in huge artistic typography.
+
+Allow parts of the typography to move behind and in front of the 3D object.
+
+Create depth.
+
+Example concept:
+
+DAV
+
+floating behind the sculpture.
+
+FRAOL
+
+large foreground typography partially overlapping the 3D environment.
+
+Add small floating text:
+
+DIGITAL CREATIVE
+DEVELOPER
+DESIGNER
+FILMMAKER
+
+These should orbit / move subtly.
+
+---
+
+# 06 — HERO STATEMENT
+
+Use:
+
+**CODE. DESIGN. MOTION. STORY.**
+
+This becomes the central philosophy of the portfolio.
+
+Animate each word differently.
+
+CODE → digital/technical animation
+
+DESIGN → geometric transformation
+
+MOTION → moving particles/light
+
+STORY → cinematic reveal
+
+When the user scrolls, these words should separate and transition into the next section.
+
+---
+
+# 07 — SCROLL EXPERIENCE
+
+Scrolling must feel like navigating through a digital world.
+
+Do not use simple:
+
+section → section → section.
+
+Instead:
+
+scrolling should control the experience.
+
+Examples:
+
+* camera moves
+* 3D object rotates
+* typography changes position
+* environments transition
+* objects move through the scene
+* images appear from depth
+* sections overlap
+* text splits apart
+* blue light trails follow transitions
+
+Create a feeling that the website is one continuous cinematic sequence.
+
+---
+
+# 08 — CUSTOM CURSOR
+
+Create an advanced custom cursor.
+
+Desktop only.
+
+Normal:
+
+small glowing dot.
+
+Hovering a link:
+
+circle expands.
+
+Hovering a project:
+
+display:
+
+VIEW PROJECT
+
+Hovering a video:
+
+display:
+
+PLAY
+
+Hovering interactive 3D:
+
+display:
+
+EXPLORE
+
+The cursor should have subtle inertia.
+
+Do not make it huge or annoying.
+
+Disable it completely on touch devices.
+
+---
+
+# 09 — INTRODUCTION
+
+After the hero, do not create a boring About section.
+
+Create a giant statement:
+
+**I DON'T JUST BUILD WEBSITES.**
+
+Pause.
+
+Then:
+
+**I BUILD EXPERIENCES.**
+
+Animate the sentence dramatically.
+
+Then introduce:
+
+Dav Fraol is a multidisciplinary digital creative working across:
+
+WEB
+DESIGN
+VIDEO
+CINEMATOGRAPHY
+CONTENT
+SOCIAL MEDIA
+
+Make each discipline appear as an interactive visual element.
+
+---
+
+# 10 — ABOUT DAV
+
+Create an experimental editorial section.
+
+Use a large portrait area.
+
+Do NOT make it a normal profile picture.
+
+Treat the portrait like an art piece.
+
+Possible effects:
+
+* image displacement
+* RGB split
+* blue light
+* parallax
+* image distortion
+* masked reveal
+* 3D tilt
+
+When the user moves the mouse, the portrait subtly reacts.
+
+Text:
+
+"Digital creative. Developer. Designer. Videographer."
+
+Then a short personal description.
+
+Keep it authentic.
+
+Do not invent achievements.
+
+---
+
+# 11 — THE 6 WORLDS
+
+Create six visually distinct creative disciplines.
+
+Instead of six boring cards, create six "worlds."
+
+### WORLD 01
+
+WEB DEVELOPMENT
+
+Visual:
+
+floating code
+3D browser windows
+particles
+interactive UI
+
+### WORLD 02
+
+GRAPHIC DESIGN
+
+Visual:
+
+typography
+posters
+logos
+abstract shapes
+design compositions
+
+### WORLD 03
+
+VIDEO EDITING
+
+Visual:
+
+timeline
+film strips
+frames
+motion
+
+### WORLD 04
+
+CINEMATOGRAPHY
+
+Visual:
+
+cinematic camera
+film frames
+lighting
+lens effects
+
+### WORLD 05
+
+CONTENT CREATION
+
+Visual:
+
+social content
+phone screens
+vertical video
+creative media
+
+### WORLD 06
+
+SOCIAL MEDIA MARKETING
+
+Visual:
+
+social feeds
+analytics-inspired abstract graphics
+campaign visuals
+
+Each world should have its own animation language.
+
+---
+
+# 12 — PORTFOLIO
+
+The portfolio must be the visual centerpiece of the website.
+
+Title:
+
+**SELECTED WORK**
+
+But don't use a normal grid.
+
+Create a giant horizontal / spatial portfolio gallery.
+
+Projects should appear at different depths.
+
+Some projects can be:
+
+* large
+* small
+* tilted
+* floating
+* partially overlapping
+
+On hover:
+
+the project expands toward the visitor.
+
+Show:
+
+PROJECT
+CATEGORY
+YEAR
+
+Clicking opens a cinematic project page.
+
+---
+
+# 13 — PROJECT DETAIL PAGE
+
+Each project should feel like a mini case-study website.
+
+Structure:
+
+01
+PROJECT INTRO
+
+02
+THE IDEA
+
+03
+THE PROCESS
+
+04
+VISUALS
+
+05
+VIDEO
+
+06
+TECHNOLOGY / TOOLS
+
+07
+FINAL RESULT
+
+08
+NEXT PROJECT
+
+Use huge visuals.
+
+Minimal text.
+
+Lots of visual storytelling.
+
+---
+
+# 14 — CINEMATIC SHOWREEL
+
+Create a major full-screen section:
+
+**SHOWREEL 2026**
+
+Use a large video area.
+
+The video should feel immersive.
+
+Add:
+
+PLAY SHOWREEL
+
+When clicked:
+
+open a fullscreen cinematic player.
+
+Use placeholder media if actual media is not available.
+
+Do not invent real projects.
+
+Make media easily replaceable later.
+
+---
+
+# 15 — 3D SKILLS GALAXY
+
+Create an interactive 3D skill universe.
+
+Instead of progress bars.
+
+Put skills floating around a central object.
+
+Example:
+
+React
+Next.js
+JavaScript
+TypeScript
+Photoshop
+Illustrator
+Figma
+Premiere Pro
+After Effects
+DaVinci Resolve
+Cinematography
+Branding
+SEO
+Social Media
+
+The user can:
+
+* rotate the environment
+* hover skills
+* click skills
+
+Clicking a skill reveals a small explanation.
+
+Do NOT show fake percentages.
+
+---
+
+# 16 — CREATIVE PROCESS
+
+Create a cinematic sequence:
+
+01
+IDEA
+
+02
+CREATE
+
+03
+BUILD
+
+04
+REFINE
+
+05
+RELEASE
+
+Use giant numbers.
+
+Each stage should visually transform into the next.
+
+---
+
+# 17 — SOCIAL CONTENT WALL
+
+Create an experimental media wall.
+
+Show:
+
+* social posts
+* posters
+* thumbnails
+* videos
+* branding
+* campaign graphics
+
+Do not copy Instagram's interface.
+
+Make it feel like an art gallery.
+
+Images should float at different depths.
+
+---
+
+# 18 — PERSONAL BRAND MOMENT
+
+Create a huge typography section:
+
+**CODE**
+
+then
+
+**DESIGN**
+
+then
+
+**MOTION**
+
+then
+
+**STORY**
+
+Each word should take over the screen.
+
+Use transitions between them.
+
+This should be one of the most memorable moments on the website.
+
+---
+
+# 19 — CONTACT EXPERIENCE
+
+Do not create:
+
+"Contact Me"
+
+with a boring form.
+
+Create:
+
+**LET'S MAKE SOMETHING THAT PEOPLE REMEMBER.**
+
+Then:
+
+START A PROJECT →
+
+The contact interaction should feel like entering a futuristic interface.
+
+Possible form fields:
+
+Name
+Email
+Project Type
+Budget
+Message
+
+Keep the form visually minimal.
+
+---
+
+# 20 — FOOTER
+
+The footer should continue the creative experience.
+
+Large:
+
+DAV FRAOL
+
+Small:
+
+DIGITAL CREATIVE / DEVELOPER / DESIGNER / FILMMAKER
+
+Social links:
+
+LinkedIn
+GitHub
+Instagram
+YouTube
+
+Add:
+
+"Back to the beginning ↑"
+
+Make it animated.
+
+---
+
+# 21 — NAVIGATION
+
+Do not use a normal corporate navbar.
+
+Create a floating minimal navigation.
+
+Possible layout:
+
+DAV FRAOL
+
+WORK
+ABOUT
+EXPERIENCE
+CONTACT
+
+Plus a small menu button.
+
+Navigation should remain visible but not dominate the screen.
+
+When opened, create a full-screen animated navigation environment.
+
+---
+
+# 22 — LOADING EXPERIENCE
+
+Create a custom loading sequence.
+
+Black screen.
+
+Animated blue line.
+
+Then:
+
+DAV FRAOL
+
+01 → 100
+
+Then the website reveals itself.
+
+Keep loading fast.
+
+Do not artificially delay the website.
+
+If assets are already loaded, skip unnecessary waiting.
+
+---
+
+# 23 — PAGE TRANSITIONS
+
+Use cinematic transitions.
+
+When navigating between pages:
+
+* dark screen
+* blue light sweep
+* typography transition
+* new page appears through a mask
+
+Avoid default browser-like transitions.
+
+---
+
+# 24 — RESPONSIVE DESIGN
+
+Desktop should be the full experience.
+
+Tablet should preserve the visual identity.
+
+Mobile should be redesigned intentionally.
+
+Do not simply shrink desktop.
+
+On mobile:
+
+* reduce 3D complexity
+* use touch interactions
+* simplify camera movement
+* remove custom cursor
+* preserve cinematic transitions
+* maintain strong typography
+* optimize WebGL
+
+The mobile version must still feel premium.
+
+---
+
+# 25 — PERFORMANCE
+
+This website will contain significant 3D and animation.
+
+Performance is extremely important.
+
+Implement:
+
+* lazy loading
+* optimized textures
+* compressed images
+* WebP/AVIF where appropriate
+* lazy video loading
+* code splitting
+* responsive assets
+* efficient Three.js scenes
+* device capability detection
+* reduced effects on low-end devices
+* prefers-reduced-motion support
+
+Create graceful fallbacks.
+
+If WebGL is unavailable, the website should still look excellent using 2D/CSS animations.
+
+---
+
+# 26 — CONTENT
+
+Use only information that is actually provided.
+
+Current identity:
+
+**Dav Fraol**
+
+Skills / disciplines:
+
+* Web Development
+* Graphic Design
+* Video Editing
+* Cinematography
+* Content Creation
+* Social Media Marketing
+
+Do not invent:
+
+* clients
+* awards
+* statistics
+* companies
+* years of experience
+* testimonials
+* revenue
+* project results
+
+Use clearly labeled placeholders for missing portfolio content.
+
+---
+
+# 27 — PROJECT DATA ARCHITECTURE
+
+Create reusable project data.
+
+Example:
+
+```ts
+{
+  id: "project-01",
+  title: "Project Name",
+  slug: "project-name",
+  category: "Web Development",
+  year: "2026",
+  description: "...",
+  coverImage: "...",
+  gallery: [],
+  video: "",
+  tools: [],
+  featured: true
+}
+```
+
+Projects should be easy to replace later.
+
+Prepare the architecture for a future CMS or Supabase backend.
+
+---
+
+# 28 — SEO
+
+Implement:
+
+Title:
+
+Dav Fraol | Digital Creative, Developer & Designer
+
+Description:
+
+Dav Fraol is a multidisciplinary digital creative specializing in web development, graphic design, video editing, cinematography, content creation, and social media marketing.
+
+Include:
+
+* semantic HTML
+* Open Graph
+* Twitter metadata
+* canonical URL support
+* sitemap-ready structure
+* robots.txt
+* accessible headings
+* image alt text
+* structured data where appropriate
+
+---
+
+# 29 — DESIGN QUALITY CONTROL
+
+Before considering the website finished, inspect every section.
+
+Ask:
+
+Does this look like a normal portfolio?
+
+If YES → redesign it.
+
+Does this section look like a template?
+
+If YES → redesign it.
+
+Is the animation unnecessary?
+
+If YES → remove it.
+
+Does the website feel visually connected?
+
+If NO → improve transitions.
+
+Does the 3D actually contribute to the experience?
+
+If NO → change it.
+
+Does the website feel like Dav Fraol's personal brand?
+
+If NO → redesign it.
+
+---
+
+# 30 — MOST IMPORTANT RULE
+
+Do not play safe.
+
+This website is supposed to be **bold and memorable**.
+
+I would rather have:
+
+ONE spectacular interactive section
+
+than
+
+TEN ordinary sections.
+
+The website should feel like someone combined:
+
+**a creative studio**
++
+**a cinematic film**
++
+**a futuristic digital art installation**
++
+**a developer portfolio**
+
+into one experience.
+
+The website itself should be the strongest portfolio piece.
+
+Build it with strong visual direction, not generic UI conventions.
+
+Start by creating the complete experience and then refine every interaction for polish, responsiveness, accessibility, and performance.

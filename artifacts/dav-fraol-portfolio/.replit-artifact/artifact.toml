@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Dav Fraol — Digital Creative Portfolio"
+description = "An immersive personal portfolio for Dav Fraol, combining creative technology, cinematic motion, 3D-inspired interaction, design, video, and storytelling into one memorable web experience."
+version = "1.0.0"
+id = "artifacts/dav-fraol-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25661
+
+[services.development]
+run = "pnpm --filter @workspace/dav-fraol-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dav-fraol-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/dav-fraol-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25661"
+BASE_PATH = "/"
