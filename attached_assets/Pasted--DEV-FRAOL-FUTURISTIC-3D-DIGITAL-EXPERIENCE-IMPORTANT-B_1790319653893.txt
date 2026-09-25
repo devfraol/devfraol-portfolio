@@ -1,0 +1,1296 @@
+# DEV FRAOL — FUTURISTIC 3D DIGITAL EXPERIENCE
+
+## IMPORTANT BRAND CORRECTION
+
+The correct brand/name is:
+
+# DEV FRAOL
+
+NOT "Dav Fraol".
+
+Every visible occurrence of the old name must be replaced with:
+
+**DEV FRAOL**
+
+Use **Dev Fraol** consistently throughout:
+
+* logo
+* hero
+* navigation
+* metadata
+* footer
+* page titles
+* project pages
+* social links
+* loading screen
+* animations
+* accessibility labels
+
+---
+
+# 01 — REDEFINE THE ENTIRE WEBSITE
+
+We are upgrading this portfolio into a **high-end futuristic 3D interactive experience**.
+
+This should NOT feel like:
+
+* a normal portfolio
+* a corporate website
+* a SaaS landing page
+* a standard developer portfolio
+* a collection of cards
+* a simple dark website with blue gradients
+
+It should feel like:
+
+**THE DIGITAL WORLD OF DEV FRAOL**
+
+Imagine the visitor is entering a futuristic digital environment and traveling through different creative disciplines.
+
+The entire website should feel like a combination of:
+
+**Futuristic technology**
++
+**3D digital art**
++
+**cinematography**
++
+**creative studio**
++
+**interactive portfolio**
++
+**developer experience**
+
+The website itself must demonstrate Dev Fraol's skills.
+
+---
+
+# 02 — CORE VISUAL CONCEPT
+
+Create a continuous 3D environment.
+
+The page should feel like the visitor is traveling through a futuristic digital space.
+
+Instead of:
+
+SECTION 1
+SECTION 2
+SECTION 3
+SECTION 4
+
+Create:
+
+**WORLD 01 → WORLD 02 → WORLD 03 → WORLD 04 → WORLD 05 → WORLD 06**
+
+Each world represents one major skill.
+
+The user scrolls vertically, but visually the camera travels through a 3D environment.
+
+---
+
+# 03 — THE 3D SCROLL SYSTEM
+
+This is one of the most important requirements.
+
+Implement a sophisticated **3D scroll-driven experience**.
+
+As the visitor scrolls:
+
+* camera moves through space
+* objects move in depth
+* typography transforms
+* 3D objects rotate
+* particles react
+* lighting changes
+* sections transition into one another
+* previous content moves into the background
+* new content emerges from the depth
+
+The website should feel like a continuous camera journey.
+
+Use:
+
+* Three.js
+* React Three Fiber
+* Drei
+* GSAP ScrollTrigger or Motion
+* smooth scrolling
+
+Use scroll progress to control:
+
+* camera position
+* camera rotation
+* object position
+* object rotation
+* scale
+* opacity
+* lighting
+* text transitions
+
+Do NOT simply animate HTML elements independently.
+
+The entire scene should feel connected.
+
+---
+
+# 04 — FUTURISTIC ENVIRONMENT
+
+Create a dark infinite environment.
+
+Visual elements:
+
+* deep black space
+* dark navy atmosphere
+* electric blue energy
+* floating particles
+* glowing lines
+* holographic grids
+* abstract architecture
+* transparent glass objects
+* metallic objects
+* floating UI fragments
+* blue volumetric light
+* subtle fog
+* depth-of-field
+* light trails
+
+The environment should evolve as the user scrolls.
+
+Different skill worlds should have different visual characteristics.
+
+---
+
+# 05 — HERO WORLD
+
+The first screen should feel like entering a futuristic digital universe.
+
+Large 3D typography:
+
+# DEV
+
+# FRAOL
+
+Do not simply place it in the center.
+
+Make the typography exist inside the 3D scene.
+
+Some letters can be:
+
+* behind objects
+* partially hidden
+* floating
+* moving toward the camera
+
+Add:
+
+**DIGITAL CREATIVE / DEVELOPER / DESIGNER / FILMMAKER**
+
+Then:
+
+# CODE
+
+# DESIGN
+
+# MOTION
+
+# STORY
+
+These words should move around the scene.
+
+---
+
+# 06 — HERO 3D OBJECT
+
+Create a signature 3D object representing Dev Fraol.
+
+Possible concept:
+
+A futuristic floating core.
+
+The core contains:
+
+* metallic geometry
+* transparent glass
+* electric blue energy
+* particles
+* glowing edges
+* animated internal structures
+
+The object should react to:
+
+* mouse movement
+* cursor position
+* scroll
+* device orientation where appropriate
+
+The object should evolve throughout the page.
+
+For example:
+
+Hero:
+
+CORE
+
+Web Development:
+
+CORE transforms into digital architecture.
+
+Graphic Design:
+
+CORE transforms into geometric design objects.
+
+Video:
+
+CORE becomes a cinematic camera/lens.
+
+Cinematography:
+
+CORE becomes a futuristic camera/lens system.
+
+Marketing:
+
+CORE becomes connected digital nodes.
+
+---
+
+# 07 — INTRODUCTION
+
+After the hero, create a huge cinematic statement.
+
+First:
+
+# I BUILD DIGITAL EXPERIENCES.
+
+Then transform into:
+
+# I DESIGN THEM.
+
+Then:
+
+# I MAKE THEM MOVE.
+
+Then:
+
+# I MAKE THEM MATTER.
+
+Use scroll-controlled typography.
+
+Each sentence should occupy most of the viewport.
+
+---
+
+# 08 — DEV FRAOL INTRODUCTION
+
+Introduce the person behind the work.
+
+Headline:
+
+# DEV FRAOL
+
+Subheadline:
+
+**Digital Creative & Developer**
+
+Description:
+
+Dev Fraol works across technology, visual design, motion, cinematography, content creation, and digital marketing.
+
+The section should communicate that these disciplines are connected.
+
+Do not make it look like a traditional biography.
+
+Use:
+
+* 3D portrait treatment
+* floating typography
+* parallax
+* particles
+* image displacement
+* blue light
+* interactive layers
+
+---
+
+# 09 — THE SKILL UNIVERSE
+
+This is a major section.
+
+Create:
+
+# THE SKILL UNIVERSE
+
+Dev Fraol works across six major creative and technical disciplines.
+
+Each discipline becomes a different 3D world.
+
+---
+
+# WORLD 01 — WEB DEVELOPMENT
+
+Visual identity:
+
+**DIGITAL ARCHITECTURE**
+
+Create a futuristic 3D environment containing:
+
+* floating browser windows
+* code fragments
+* 3D UI panels
+* glowing lines
+* digital structures
+* responsive layout fragments
+
+Title:
+
+# WEB DEVELOPMENT
+
+Description:
+
+Building modern, responsive, interactive digital experiences and full-stack web applications.
+
+### TOOLS & TECHNOLOGIES
+
+Frontend:
+
+* HTML
+* CSS
+* JavaScript
+* TypeScript
+* React
+* Next.js
+* Tailwind CSS
+
+Backend:
+
+* Node.js
+* Express
+* REST APIs
+
+Database / Backend Services:
+
+* Supabase
+* PostgreSQL
+
+Development:
+
+* Git
+* GitHub
+* VS Code
+* Cursor
+
+Create these tools as floating objects around the main 3D environment.
+
+When hovering a tool:
+
+* object glows
+* name appears
+* short description appears
+* subtle soundless interaction occurs
+
+Do not show fake skill percentages.
+
+---
+
+# WORLD 02 — GRAPHIC DESIGN
+
+Visual identity:
+
+**THE VISUAL LAB**
+
+Create a futuristic design studio in 3D.
+
+Include:
+
+* floating posters
+* typography
+* logos
+* color palettes
+* abstract shapes
+* design frames
+* digital canvases
+
+Title:
+
+# GRAPHIC DESIGN
+
+Description:
+
+Creating visual identities, digital graphics, social media designs, promotional materials, and brand experiences.
+
+### TOOLS
+
+* Adobe Photoshop
+* Adobe Illustrator
+* Adobe InDesign
+* Figma
+* Canva
+
+### SKILLS
+
+* Branding
+* Visual Identity
+* Poster Design
+* Social Media Design
+* UI Design
+* Typography
+* Layout Design
+* Photo Manipulation
+
+As the user scrolls deeper, the design objects should move around the camera.
+
+---
+
+# WORLD 03 — VIDEO EDITING
+
+Visual identity:
+
+**THE EDIT SUITE**
+
+Transform the environment into a futuristic editing room.
+
+Create:
+
+* floating timelines
+* video frames
+* film strips
+* waveform visualizations
+* transition effects
+* floating monitors
+
+Title:
+
+# VIDEO EDITING
+
+Description:
+
+Turning raw footage into engaging visual stories through editing, motion, pacing, sound, and color.
+
+### TOOLS
+
+* Adobe Premiere Pro
+* Adobe After Effects
+* DaVinci Resolve
+* CapCut
+
+### SKILLS
+
+* Video Editing
+* Motion Graphics
+* Color Grading
+* Visual Effects
+* Sound Editing
+* Short-form Content
+* Storytelling
+
+The timeline should move based on scroll position.
+
+---
+
+# WORLD 04 — CINEMATOGRAPHY
+
+Visual identity:
+
+**THE CINEMATIC WORLD**
+
+This should be one of the most beautiful sections.
+
+Create a futuristic cinematic environment.
+
+Include:
+
+* floating camera
+* lens
+* film frames
+* cinematic lighting
+* light rays
+* depth-of-field
+* film grain
+* camera movement
+
+Title:
+
+# CINEMATOGRAPHY
+
+Description:
+
+Creating visual stories through composition, lighting, camera movement, atmosphere, and cinematic direction.
+
+### TOOLS / EQUIPMENT
+
+Use a flexible structure because equipment can change.
+
+Categories:
+
+CAMERA
+LENSES
+LIGHTING
+AUDIO
+STABILIZATION
+POST-PRODUCTION
+
+Do not invent specific camera models or equipment that Dev Fraol has not provided.
+
+Use placeholders where necessary.
+
+### SKILLS
+
+* Camera Operation
+* Composition
+* Lighting
+* Camera Movement
+* Visual Storytelling
+* Color
+* Shot Planning
+* Cinematic Direction
+
+---
+
+# WORLD 05 — CONTENT CREATION
+
+Visual identity:
+
+**THE CONTENT ENGINE**
+
+Create a futuristic content studio.
+
+Show:
+
+* smartphones
+* vertical video frames
+* cameras
+* thumbnails
+* social content
+* floating media cards
+* animated posts
+
+Title:
+
+# CONTENT CREATION
+
+Description:
+
+Creating visual content designed to communicate ideas, tell stories, and connect with audiences across digital platforms.
+
+### TOOLS
+
+* Adobe Premiere Pro
+* After Effects
+* Photoshop
+* Illustrator
+* Canva
+* CapCut
+* Figma
+
+### SKILLS
+
+* Short-form Video
+* Social Content
+* Creative Direction
+* Content Planning
+* Visual Storytelling
+* Thumbnail Design
+* Brand Content
+
+---
+
+# WORLD 06 — SOCIAL MEDIA MARKETING
+
+Visual identity:
+
+**THE NETWORK**
+
+Create a futuristic network environment.
+
+Thousands of subtle glowing nodes connect together.
+
+Show abstract representations of:
+
+* content
+* audience
+* campaigns
+* engagement
+* platforms
+* analytics
+
+Do not create fake statistics.
+
+Title:
+
+# SOCIAL MEDIA MARKETING
+
+Description:
+
+Creating and organizing digital content and campaigns that help brands communicate consistently across social platforms.
+
+### SKILLS
+
+* Social Media Strategy
+* Content Strategy
+* Campaign Planning
+* Creative Content
+* Social Branding
+* Audience Engagement
+* Digital Marketing
+* SEO
+
+Tools can be added later through the project data structure.
+
+---
+
+# 10 — SKILL TOOL SYSTEM
+
+Create a reusable component called:
+
+`SkillTool`
+
+Every tool should contain:
+
+```ts
+{
+  name: string;
+  category: string;
+  description: string;
+  icon?: string;
+  logo?: string;
+}
+```
+
+Example:
+
+```ts
+{
+  name: "Adobe Photoshop",
+  category: "Graphic Design",
+  description: "Professional image editing and visual design."
+}
+```
+
+Create reusable 3D presentations for tools.
+
+Do not hardcode each tool's visual component separately.
+
+---
+
+# 11 — 3D TOOL ORBIT
+
+For each skill world, create a central 3D object.
+
+Around it:
+
+tools orbit in 3D space.
+
+Example:
+
+GRAPHIC DESIGN
+
+```
+         Photoshop
+             |
+```
+
+Illustrator — CORE — Figma
+|
+InDesign
+
+But make this actually 3D.
+
+As the user scrolls:
+
+* orbit rotates
+* tools move closer
+* selected tools enlarge
+* background transforms
+
+---
+
+# 12 — FEATURED WORK
+
+After the skill universe, transition into:
+
+# WORK
+
+The portfolio should demonstrate the skills introduced above.
+
+Create a spatial 3D project gallery.
+
+Projects can exist at different depths.
+
+Categories:
+
+WEB
+DESIGN
+VIDEO
+CINEMATOGRAPHY
+CONTENT
+MARKETING
+
+Use large visual previews.
+
+Projects should not be tiny cards.
+
+Make each project feel like an artifact inside the environment.
+
+---
+
+# 13 — PROJECT INTERACTION
+
+When the visitor hovers over a project:
+
+The environment should react.
+
+For example:
+
+* background darkens
+* project grows
+* blue light surrounds it
+* project metadata appears
+* cursor changes to VIEW
+
+Click:
+
+Open cinematic project page.
+
+---
+
+# 14 — PROJECT DETAIL EXPERIENCE
+
+Project page should include:
+
+HERO
+
+PROJECT DESCRIPTION
+
+ROLE
+
+DISCIPLINE
+
+TOOLS
+
+PROCESS
+
+VISUAL GALLERY
+
+VIDEO
+
+RESULT
+
+NEXT PROJECT
+
+Use large visual storytelling.
+
+---
+
+# 15 — CREATIVE PROCESS
+
+Create another 3D sequence:
+
+# FROM IDEA → EXPERIENCE
+
+Stages:
+
+01
+DISCOVER
+
+02
+CONCEPT
+
+03
+DESIGN
+
+04
+BUILD
+
+05
+CREATE
+
+06
+REFINE
+
+07
+LAUNCH
+
+Each stage should be represented by a 3D object.
+
+The camera moves through them as the visitor scrolls.
+
+---
+
+# 16 — SHOWREEL
+
+Create:
+
+# DEV FRAOL
+
+# SHOWREEL
+
+Full-screen cinematic video environment.
+
+A large floating video frame.
+
+Around it:
+
+film strips
+particles
+light rays
+camera elements
+
+CTA:
+
+**PLAY SHOWREEL**
+
+Open fullscreen video player.
+
+Make video source easy to replace later.
+
+---
+
+# 17 — 3D ABOUT SPACE
+
+Create a section where Dev Fraol's portrait exists inside the environment.
+
+The visitor scrolls around the portrait.
+
+Add floating labels:
+
+DEVELOPER
+
+DESIGNER
+
+VIDEOGRAPHER
+
+CINEMATOGRAPHER
+
+CONTENT CREATOR
+
+DIGITAL CREATIVE
+
+These should move in 3D space.
+
+---
+
+# 18 — PERSONAL PHILOSOPHY
+
+Create a powerful statement:
+
+# ONE PERSON.
+
+# MANY DISCIPLINES.
+
+# ONE VISION.
+
+Then:
+
+**Technology gives me the tools.
+Design gives me the language.
+Motion gives me the energy.
+Story gives it meaning.**
+
+Animate each sentence as the camera moves through the scene.
+
+---
+
+# 19 — CONTACT
+
+End the experience with:
+
+# LET'S BUILD SOMETHING
+
+# IMPOSSIBLE TO IGNORE.
+
+CTA:
+
+**START A PROJECT**
+
+Secondary:
+
+**CONNECT WITH DEV**
+
+Contact form:
+
+Name
+Email
+Project Type
+Message
+
+Make it feel like the visitor is entering a futuristic command center.
+
+---
+
+# 20 — NAVIGATION
+
+Minimal floating navigation:
+
+DEV FRAOL
+
+WORK
+SKILLS
+ABOUT
+CONTACT
+
+Add:
+
+MENU
+
+When opened:
+
+Create a full-screen futuristic navigation interface.
+
+Navigation items should appear in 3D depth.
+
+---
+
+# 21 — SCROLL INDICATOR
+
+Create a sophisticated scroll indicator.
+
+Instead of:
+
+"Scroll Down"
+
+show:
+
+`01 / 06`
+
+and the current world name.
+
+Examples:
+
+`01 / 06 — WEB DEVELOPMENT`
+
+`02 / 06 — GRAPHIC DESIGN`
+
+`03 / 06 — VIDEO EDITING`
+
+etc.
+
+The indicator changes dynamically as the camera enters each world.
+
+---
+
+# 22 — SOUND
+
+Do NOT automatically play sound.
+
+If sound is eventually added, require user interaction.
+
+For now, create the visual system so ambient sound could be added later.
+
+---
+
+# 23 — INTERACTION DETAILS
+
+Add subtle interactions:
+
+* mouse-reactive 3D lighting
+* camera parallax
+* depth-based blur
+* magnetic buttons
+* text distortion
+* image displacement
+* hover expansion
+* object rotation
+* particle response
+* smooth camera movement
+* scroll velocity effects
+
+Avoid random animation.
+
+Every movement should have a reason.
+
+---
+
+# 24 — FUTURISTIC UI LANGUAGE
+
+Create small futuristic interface details:
+
+* coordinates
+* section numbers
+* tiny metadata
+* technical labels
+* grid references
+* glowing lines
+* thin borders
+* scanning effects
+* tiny status indicators
+
+Example:
+
+`SYSTEM / CREATIVE-01`
+
+`WORLD / GRAPHICS`
+
+`TOOLS / 05`
+
+`STATUS / ACTIVE`
+
+Use these as visual decoration.
+
+Do not overuse them.
+
+---
+
+# 25 — TYPOGRAPHY
+
+Use a combination of:
+
+Primary:
+
+**Space Grotesk**
+
+Secondary:
+
+**Inter**
+
+Optional display:
+
+**Orbitron**
+
+Use typography dramatically.
+
+Mix:
+
+* giant display text
+* tiny technical labels
+* editorial paragraphs
+* vertical text
+* rotated labels
+
+Do not make everything huge.
+
+Create contrast.
+
+---
+
+# 26 — RESPONSIVE EXPERIENCE
+
+Desktop:
+
+FULL 3D EXPERIENCE
+
+Tablet:
+
+REDUCED 3D
+
+Mobile:
+
+OPTIMIZED CINEMATIC EXPERIENCE
+
+On mobile:
+
+* simplify 3D scenes
+* reduce particle counts
+* remove custom cursor
+* replace hover interactions with tap
+* reduce camera movement
+* preserve the storytelling
+* maintain strong typography
+
+Never allow horizontal overflow.
+
+---
+
+# 27 — PERFORMANCE
+
+Because this is a WebGL-heavy experience:
+
+Implement:
+
+* dynamic pixel ratio
+* device capability detection
+* optimized geometry
+* optimized textures
+* lazy loading
+* lazy video
+* compressed assets
+* code splitting
+* disposal of Three.js resources
+* reduced effects on mobile
+* reduced particle count on low-end devices
+* fallback 2D mode
+
+The site must remain responsive.
+
+---
+
+# 28 — ACCESSIBILITY
+
+Maintain:
+
+* semantic HTML
+* keyboard navigation
+* visible focus states
+* alt text
+* readable contrast
+* reduced-motion mode
+* accessible buttons
+* accessible navigation
+
+If:
+
+`prefers-reduced-motion: reduce`
+
+then significantly reduce camera movement and animation while preserving the design.
+
+---
+
+# 29 — DATA ARCHITECTURE
+
+Create data-driven structures for:
+
+Skills
+Tools
+Projects
+Services
+Social Links
+Experience
+
+Example:
+
+```ts
+Skill {
+  id
+  name
+  description
+  category
+  tools[]
+  visualTheme
+}
+```
+
+Example:
+
+```ts
+Tool {
+  id
+  name
+  category
+  description
+  logo
+}
+```
+
+This will make it easy to connect a CMS or Supabase later.
+
+---
+
+# 30 — SEO
+
+Use:
+
+Title:
+
+**Dev Fraol | Digital Creative, Developer & Designer**
+
+Description:
+
+**Dev Fraol is a multidisciplinary digital creative working across web development, graphic design, video editing, cinematography, content creation, and digital marketing.**
+
+Implement:
+
+* semantic HTML
+* Open Graph
+* Twitter/X metadata
+* canonical URLs
+* sitemap
+* robots.txt
+* structured data
+* proper heading hierarchy
+* descriptive image alt text
+
+---
+
+# 31 — FINAL QUALITY TEST
+
+Before finishing, inspect the entire website.
+
+Ask:
+
+### Does it feel futuristic?
+
+If not, increase environmental depth and visual storytelling.
+
+### Does it feel 3D?
+
+If not, increase spatial relationships and camera movement.
+
+### Does scrolling feel like a journey?
+
+If not, redesign the transitions.
+
+### Does it feel like Dev Fraol?
+
+If not, strengthen the personal brand.
+
+### Are the skills clearly represented?
+
+Every major discipline must have its own world.
+
+### Are the tools visible?
+
+Each skill must show its relevant tools.
+
+### Does it feel like a template?
+
+If yes, redesign the section.
+
+### Is it too busy?
+
+Remove unnecessary effects.
+
+### Is the 3D actually useful?
+
+Every major 3D element should contribute to storytelling.
+
+---
+
+# FINAL CREATIVE TARGET
+
+The visitor should feel like they are traveling through:
+
+**DEV FRAOL'S DIGITAL UNIVERSE**
+
+Starting with:
+
+**CODE**
+
+Then:
+
+**DESIGN**
+
+Then:
+
+**MOTION**
+
+Then:
+
+**CINEMATOGRAPHY**
+
+Then:
+
+**CONTENT**
+
+Then:
+
+**MARKETING**
+
+And finally:
+
+**WORK**
+
+Ending with:
+
+# LET'S CREATE THE NEXT EXPERIENCE.
+
+Do not build a safe portfolio.
+
+Build an **interactive 3D digital identity**.
+
+The website should itself be a demonstration of Dev Fraol's creativity, technical ability, design sense, and understanding of motion.
+
+Make it futuristic.
+
+Make it bold.
+
+Make it memorable.
+
+Make it feel alive.
