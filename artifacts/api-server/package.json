@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "export NODE_ENV=development && pnpm run build && pnpm run start",
-    "build": "pnpm run typecheck:references && node ./build.mjs",
+    "build": "pnpm run build:references && node ./build.mjs",
     "start": "node --enable-source-maps ./dist/index.mjs",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "typecheck:references": "tsc --build tsconfig.json --force"
+    "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
+    "build:references": "tsc --build tsconfig.json"
   },
   "dependencies": {
     "@workspace/api-zod": "workspace:*",
