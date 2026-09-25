@@ -1,0 +1,8 @@
+{
+  "buildCommand": "pnpm run build",
+  "functions": {
+    "api/[...path].ts": {
+      "runtime": "nodejs22.x"
+    }
+  }
+}
