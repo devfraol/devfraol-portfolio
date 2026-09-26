@@ -15,7 +15,13 @@ async function buildAll() {
   await rm(distDir, { recursive: true, force: true });
 
   await esbuild({
-    entryPoints: [path.resolve(artifactDir, "src/index.ts")],
+    entryPoints: {
+      // The local/container entry point owns the HTTP listener.
+      index: path.resolve(artifactDir, "src/index.ts"),
+      // The Vercel adapter imports this prebundled canonical Express app.
+      // Keeping this entry separate ensures it never calls listen().
+      serverless: path.resolve(artifactDir, "src/app.ts"),
+    },
     platform: "node",
     bundle: true,
     format: "esm",
