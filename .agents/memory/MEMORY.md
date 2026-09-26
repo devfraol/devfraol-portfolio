@@ -1,1 +1,2 @@
 - [Workspace package installs](workspace-package-installs.md) — target pnpm adds at the artifact package; workspace-root adds are rejected in this monorepo.
+- [Portfolio scene architecture](portfolio-scene-architecture.md) — keep one persistent R3F universe with keyed camera states and Lenis/GSAP synchronization.

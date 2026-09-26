@@ -1,0 +1,259 @@
+ADVANCED 3D + SCROLL EXPERIENCE UPGRADE
+
+We now have a working GitHub → Vercel deployment pipeline.
+
+Your task is ONLY to significantly improve the existing portfolio's 3D scene and scroll-driven animation system.
+
+IMPORTANT:
+- Do NOT modify the Vercel deployment architecture.
+- Do NOT modify the API architecture.
+- Do NOT modify database/auth/backend code.
+- Do NOT change vercel.json.
+- Do NOT remove existing website sections/content.
+- Do NOT replace the entire website with a generic template.
+- First inspect the existing implementation and build on top of it.
+- Preserve the existing visual identity and content.
+
+GOAL
+
+Transform the current 3D/scroll experience into a premium cinematic interactive portfolio.
+
+TECHNOLOGY
+
+Use the existing project stack where possible:
+- React
+- Three.js
+- React Three Fiber
+- @react-three/drei
+- GSAP + ScrollTrigger
+- Lenis if already installed
+- Existing animation utilities
+
+Do NOT add unnecessary libraries if the project already has equivalent functionality.
+
+PHASE 1 — AUDIT
+
+Before changing code:
+
+1. Find the current 3D scene/component.
+2. Find the current scroll implementation.
+3. Find existing GSAP/ScrollTrigger usage.
+4. Find Lenis/smooth-scroll implementation.
+5. Identify all portfolio sections.
+6. Identify the current camera, lighting, materials and objects.
+7. Determine which components can be upgraded instead of rewritten.
+
+Briefly report what currently exists before making changes.
+
+PHASE 2 — SCROLL SYSTEM
+
+Create a proper coordinated scroll system.
+
+Requirements:
+
+- Smooth scrolling using the existing Lenis implementation if available.
+- Synchronize Lenis with GSAP ScrollTrigger correctly.
+- ScrollTrigger must update reliably with smooth scrolling.
+- Avoid competing scroll systems.
+- Avoid excessive React state updates on every animation frame.
+
+Use GSAP timelines for major scroll sequences.
+
+Use normalized scroll progress where appropriate.
+
+PHASE 3 — CINEMATIC CAMERA
+
+Upgrade the 3D camera behavior.
+
+The camera should travel through the portfolio rather than simply rotating one object.
+
+Create smooth transitions between sections:
+
+HERO
+→ camera establishes the scene
+
+ABOUT
+→ camera moves forward/sideways and reveals the next visual layer
+
+SKILLS
+→ camera transitions around the 3D elements
+
+PROJECTS
+→ camera moves deeper into the scene
+
+EXPERIENCE
+→ controlled cinematic transition
+
+CONTACT
+→ camera settles into a final composition
+
+Do NOT make the camera movement excessive or disorienting.
+
+Use smooth interpolation/easing.
+
+Camera movement should feel intentional and cinematic.
+
+PHASE 4 — 3D OBJECT ANIMATION
+
+Make the existing 3D objects respond to scroll.
+
+Implement combinations of:
+
+- position
+- rotation
+- scale
+- opacity where technically appropriate
+- material/emissive intensity
+- subtle floating
+- depth movement
+- section-specific animation
+
+Objects should not simply rotate continuously.
+
+They should have different animation states based on scroll progress.
+
+Example:
+
+scroll progress 0.0 → hero state
+scroll progress 0.2 → transition state
+scroll progress 0.4 → about state
+scroll progress 0.6 → skills state
+scroll progress 0.8 → projects state
+scroll progress 1.0 → contact state
+
+Use GSAP timelines or controlled animation logic rather than dozens of independent effects.
+
+PHASE 5 — DEPTH / PARALLAX
+
+Create a layered sense of depth.
+
+Use:
+
+- foreground 3D elements
+- midground elements
+- background environment
+- camera movement
+- subtle mouse parallax
+
+Mouse movement should produce only a subtle effect.
+
+Do not make the entire page move aggressively with the cursor.
+
+PHASE 6 — LIGHTING
+
+Improve the cinematic lighting.
+
+Use the existing scene architecture where possible.
+
+Create:
+
+- primary key light
+- subtle rim/fill lighting
+- ambient/environment contribution
+- controlled emissive highlights
+
+Avoid excessive bloom/glow.
+
+The scene should remain premium and readable.
+
+PHASE 7 — SECTION TRANSITIONS
+
+Each major section should feel connected to the 3D journey.
+
+Avoid abrupt animation resets.
+
+Create smooth transitions between states.
+
+The user should feel like they are moving through one continuous visual experience.
+
+Do not make every section look like a separate animation demo.
+
+PHASE 8 — MICRO INTERACTIONS
+
+Add subtle premium interactions:
+
+- mouse-based camera parallax
+- hover response on important interactive 3D elements
+- subtle object floating
+- controlled text reveal
+- section entrance animations
+- smooth CTA/button transitions
+
+Keep these restrained.
+
+PHASE 9 — PERFORMANCE
+
+This is critical.
+
+Do NOT sacrifice performance for visual effects.
+
+Requirements:
+
+- avoid unnecessary React re-renders
+- use refs for animation state where appropriate
+- use useFrame efficiently
+- avoid creating Three.js objects every frame
+- dispose resources correctly
+- reduce expensive effects on mobile
+- use appropriate pixel ratio limits
+- pause/reduce animation when the tab is hidden if appropriate
+- respect prefers-reduced-motion
+- maintain a usable experience on lower-end devices
+
+Create a mobile-friendly fallback if the current 3D scene is too expensive.
+
+PHASE 10 — VISUAL QUALITY
+
+The final experience should feel:
+
+- futuristic
+- cinematic
+- premium
+- professional
+- technically sophisticated
+- smooth
+- intentional
+
+It should NOT feel:
+
+- like a gaming website
+- like a random Three.js demo
+- overly flashy
+- full of spinning objects
+- AI-generated/template-like
+- heavy or laggy
+
+IMPORTANT IMPLEMENTATION RULE
+
+Do not rewrite working parts just for the sake of rewriting them.
+
+Reuse existing components and architecture whenever possible.
+
+After implementation:
+
+1. Run typecheck.
+2. Run production build.
+3. Verify the 3D scene.
+4. Verify smooth scrolling.
+5. Verify every major section transition.
+6. Verify mobile behavior.
+7. Verify prefers-reduced-motion.
+8. Verify there are no console errors.
+9. Verify Git diff contains only relevant UI/3D changes.
+
+Do NOT commit or push automatically.
+
+FINAL REPORT
+
+Return:
+
+1. Existing 3D architecture found
+2. Files changed
+3. Scroll system improvements
+4. Camera improvements
+5. 3D animation improvements
+6. Section transitions
+7. Performance improvements
+8. Mobile/reduced-motion handling
+9. Validation results
+10. Any remaining visual issues that should be addressed next

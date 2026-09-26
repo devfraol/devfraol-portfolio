@@ -1,8 +1,12 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Line, RoundedBox } from '@react-three/drei';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Color, FogExp2, MathUtils, Vector3, type Group } from 'three';
+
+gsap.registerPlugin(ScrollTrigger);
 
 type SceneProps = {
   progress: number;
@@ -16,6 +20,15 @@ type JourneyProps = SceneProps & {
 const BLUE = '#35c7ff';
 const ICE = '#f4f8ff';
 const journeyColors = ['#35c7ff', '#a5b4ff', '#ffb56b', '#ff718f', '#5ce0c1', '#7eb8ff', '#35c7ff', '#b6a7ff', '#54d8ff', '#35c7ff'];
+
+const cameraStops = [
+  { x: 0, y: 0.15, z: 8, tx: 0, ty: 0, tz: -2.2, roll: 0 },
+  { x: 1.45, y: 0.4, z: 2.2, tx: 0.2, ty: 0.08, tz: -6.8, roll: -0.02 },
+  { x: -1.25, y: 0.28, z: -8.8, tx: 0.15, ty: 0.12, tz: -13.2, roll: 0.018 },
+  { x: 1.1, y: -0.32, z: -23.8, tx: -0.2, ty: 0.05, tz: -29, roll: -0.025 },
+  { x: -1.05, y: 0.35, z: -36.5, tx: 0.05, ty: -0.1, tz: -41.8, roll: 0.02 },
+  { x: 0.1, y: 0.12, z: -47, tx: 0, ty: 0, tz: -51, roll: 0 },
+] as const;
 
 function supportsWebGL() {
   if (typeof document === 'undefined') return false;
@@ -125,12 +138,17 @@ function WorldArchitecture({ index, active, compact }: { index: number; active: 
   const focus = Math.max(0, 1 - Math.abs(active - index) * 0.4);
   const color = journeyColors[index];
   const group = useRef<Group>(null);
+  const worldZ = -index * 7.2 - 3;
   useFrame((_, delta) => {
     if (!group.current) return;
     group.current.rotation.y += delta * (index === 5 ? 0.05 : 0.018);
-    group.current.position.x = Math.sin(performance.now() * 0.00025 + index) * 0.08;
+    const distance = Math.min(1, Math.abs(active - index));
+    group.current.position.x = MathUtils.damp(group.current.position.x, Math.sin(performance.now() * 0.00025 + index) * (0.08 + distance * 0.18), 3, delta);
+    group.current.position.z = MathUtils.damp(group.current.position.z, worldZ + Math.sin(performance.now() * 0.00045 + index) * distance * 1.8, 3, delta);
+    const scale = 0.68 + focus * 0.48;
+    group.current.scale.setScalar(MathUtils.damp(group.current.scale.x, scale, 3, delta));
   });
-  const z = -index * 7.2 - 3;
+  const z = worldZ;
   if (index === 0) return null;
   return (
     <group ref={group} position={[(index % 2 ? 2.5 : -2.5) * focus, (index % 3 - 1) * 0.55, z]} scale={0.72 + focus * 0.38}>
@@ -232,25 +250,123 @@ function WorldArchitecture({ index, active, compact }: { index: number; active: 
   );
 }
 
+function CinematicLighting({ active, reducedMotion }: { active: number; reducedMotion: boolean }) {
+  const key = useRef<import('three').DirectionalLight>(null);
+  const rim = useRef<import('three').PointLight>(null);
+  const fill = useRef<import('three').PointLight>(null);
+  const colors = useMemo(() => journeyColors.map((color) => new Color(color)), []);
+  const activeColor = useMemo(() => new Color(BLUE), []);
+
+  useFrame((_, delta) => {
+    const index = Math.min(journeyColors.length - 1, Math.max(0, Math.floor(active)));
+    activeColor.lerp(colors[index], Math.min(1, delta * 4));
+    if (key.current) {
+      key.current.position.x = MathUtils.damp(key.current.position.x, Math.sin(active * 0.72) * 4.5, 2.5, delta);
+      key.current.position.y = MathUtils.damp(key.current.position.y, 3.5 + Math.cos(active * 0.5) * 1.2, 2.5, delta);
+      key.current.position.z = MathUtils.damp(key.current.position.z, 4 - active * 3.4, 2.5, delta);
+      key.current.intensity = MathUtils.damp(key.current.intensity, 1.1 + (1 - Math.abs(active - index)) * 0.7, 2.5, delta);
+    }
+    if (rim.current) {
+      rim.current.color.copy(activeColor);
+      rim.current.position.x = MathUtils.damp(rim.current.position.x, Math.cos(active * 0.8) * 4, 2.5, delta);
+      rim.current.position.z = MathUtils.damp(rim.current.position.z, -8 - active * 5.4, 2.5, delta);
+      rim.current.intensity = MathUtils.damp(rim.current.intensity, reducedMotion ? 1.2 : 2.2 + Math.sin(active * Math.PI) * 1.6, 2.5, delta);
+    }
+    if (fill.current) {
+      fill.current.position.y = MathUtils.damp(fill.current.position.y, -2 + Math.sin(active * 1.4) * 1.5, 2.5, delta);
+      fill.current.intensity = MathUtils.damp(fill.current.intensity, 0.7 + active * 0.08, 2.5, delta);
+    }
+  });
+
+  return (
+    <>
+      <ambientLight intensity={0.16} color="#6c88aa" />
+      <directionalLight ref={key} position={[4, 5, 3]} intensity={1.1} color="#d7e8ff" />
+      <pointLight ref={rim} position={[0, 1, -8]} intensity={2.2} distance={16} color={BLUE} />
+      <pointLight ref={fill} position={[-4, -2, 2]} intensity={0.8} distance={12} color="#6689b5" />
+    </>
+  );
+}
+
+function DepthRibbons({ compact }: { compact: boolean }) {
+  const group = useRef<Group>(null);
+  const ribbons = useMemo(() => Array.from({ length: compact ? 4 : 8 }, (_, index) => {
+    const side = index % 2 === 0 ? -1 : 1;
+    const offset = Math.floor(index / 2);
+    return {
+      x: side * (3.6 + (offset % 2) * 0.8),
+      y: (offset - 1.5) * 1.6,
+      z: -5 - offset * 13,
+      color: index % 3 === 0 ? ICE : BLUE,
+      opacity: index % 3 === 0 ? 0.2 : 0.34,
+    };
+  }), [compact]);
+
+  useFrame((_, delta) => {
+    if (!group.current) return;
+    group.current.rotation.y = MathUtils.damp(group.current.rotation.y, Math.sin(performance.now() * 0.00015) * 0.035, 2, delta);
+    group.current.rotation.x = MathUtils.damp(group.current.rotation.x, Math.cos(performance.now() * 0.00012) * 0.018, 2, delta);
+  });
+
+  return (
+    <group ref={group}>
+      {ribbons.map((ribbon, index) => (
+        <Line
+          key={index}
+          points={[
+            [ribbon.x - 1.2, ribbon.y - 1.5, ribbon.z],
+            [ribbon.x + 0.5, ribbon.y + 0.5, ribbon.z - 1.3],
+            [ribbon.x - 0.2, ribbon.y + 1.9, ribbon.z - 2.8],
+          ]}
+          color={ribbon.color}
+          transparent
+          opacity={ribbon.opacity}
+          lineWidth={index % 3 === 0 ? 0.4 : 0.7}
+        />
+      ))}
+    </group>
+  );
+}
+
 function CameraController({ progress, pointer, reducedMotion }: SceneProps & { pointer: { x: number; y: number }; reducedMotion: boolean }) {
   const { camera } = useThree();
   const target = useRef(new Vector3(0, 0, -3));
+  const rig = useMemo(() => {
+    const proxy = { ...cameraStops[0] };
+    const timeline = gsap.timeline({ paused: true });
+    cameraStops.slice(1).forEach((stop, index) => {
+      timeline.to(proxy, {
+        ...stop,
+        duration: index === cameraStops.length - 2 ? 0.24 : 0.19,
+        ease: index === cameraStops.length - 2 ? 'power2.out' : 'sine.inOut',
+      });
+    });
+    return { proxy, timeline };
+  }, []);
   useFrame((_, delta) => {
-    const travel = progress * 55;
-    const desiredX = Math.sin(progress * Math.PI * 2.2) * 1.8 + pointer.x * 0.32;
-    const desiredY = Math.cos(progress * Math.PI * 1.7) * 0.72 - pointer.y * 0.18;
-    const desiredZ = 8 - travel;
+    rig.timeline.progress(progress);
+    const desiredX = rig.proxy.x + pointer.x * 0.22;
+    const desiredY = rig.proxy.y - pointer.y * 0.12;
+    const desiredZ = rig.proxy.z;
     camera.position.x = MathUtils.damp(camera.position.x, desiredX, reducedMotion ? 7 : 3.4, delta);
     camera.position.y = MathUtils.damp(camera.position.y, desiredY, reducedMotion ? 7 : 3.4, delta);
     camera.position.z = MathUtils.damp(camera.position.z, desiredZ, reducedMotion ? 7 : 3.4, delta);
     target.current.set(
-      Math.sin(progress * Math.PI * 2) * 0.7 + pointer.x * 0.16,
-      Math.cos(progress * Math.PI * 1.4) * 0.22,
-      camera.position.z - 3.6,
+      rig.proxy.tx + pointer.x * 0.1,
+      rig.proxy.ty - pointer.y * 0.06,
+      rig.proxy.tz,
     );
     camera.lookAt(target.current);
-    camera.rotation.z = MathUtils.damp(camera.rotation.z, Math.sin(progress * Math.PI * 2) * 0.035 + pointer.x * 0.012, 3, delta);
+    camera.rotation.z = MathUtils.damp(camera.rotation.z, rig.proxy.roll + pointer.x * 0.008, 3, delta);
+    const perspectiveCamera = camera as import('three').PerspectiveCamera;
+    perspectiveCamera.fov = MathUtils.damp(perspectiveCamera.fov, 44 + Math.sin(progress * Math.PI) * 3, 3, delta);
+    perspectiveCamera.updateProjectionMatrix();
   });
+  useEffect(() => {
+    return () => {
+      rig.timeline.kill();
+    };
+  }, [rig]);
   return null;
 }
 
@@ -265,10 +381,9 @@ function Universe({ progress, compact, reducedMotion }: JourneyProps) {
   }, [compact, scene]);
   return (
     <>
-      <ambientLight intensity={0.22} color="#6c88aa" />
-      <directionalLight position={[4, 5, 3]} intensity={1.1} color="#d7e8ff" />
-      <pointLight position={[Math.sin(active * 0.8) * 3, 1 + Math.cos(active) * 1.2, -10 - active * 2.5]} intensity={2.5 + active * 0.18} color={journeyColors[Math.min(9, Math.floor(active))]} distance={15} />
+      <CinematicLighting active={active} reducedMotion={reducedMotion} />
       <StarField compact={compact} />
+      <DepthRibbons compact={compact} />
       <CameraController progress={progress} pointer={pointer} reducedMotion={reducedMotion} />
       <group position={[0, 0, 0]}>
         <DevCore progress={progress} pointer={pointer} compact={compact} reducedMotion={reducedMotion} />
@@ -286,6 +401,7 @@ export function ScrollScene({ progress }: SceneProps) {
   const [webgl, setWebgl] = useState(true);
   const [compact, setCompact] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [pageVisible, setPageVisible] = useState(true);
   useEffect(() => {
     setWebgl(supportsWebGL());
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -293,28 +409,38 @@ export function ScrollScene({ progress }: SceneProps) {
       setReducedMotion(motion.matches);
       setCompact(window.innerWidth < 800 || (navigator.hardwareConcurrency || 8) <= 4);
     };
+    const updateVisibility = () => setPageVisible(document.visibilityState === 'visible');
     update();
+    updateVisibility();
     motion.addEventListener('change', update);
     window.addEventListener('resize', update);
-    const lenis = reducedMotion ? null : new Lenis({ duration: 1.05, smoothWheel: true, syncTouch: false });
-    let frame = 0;
+    document.addEventListener('visibilitychange', updateVisibility);
+    const lenis = motion.matches ? null : new Lenis({ duration: 1.05, smoothWheel: true, syncTouch: false });
+    const onLenisScroll = () => ScrollTrigger.update();
+    lenis?.on('scroll', onLenisScroll);
     const raf = (time: number) => {
-      lenis?.raf(time);
-      frame = requestAnimationFrame(raf);
+      if (!document.hidden) lenis?.raf(time * 1000);
     };
-    if (lenis) frame = requestAnimationFrame(raf);
+    gsap.ticker.add(raf);
+    gsap.ticker.lagSmoothing(1000, 16);
+    const refresh = window.setTimeout(() => ScrollTrigger.refresh(), 120);
     return () => {
       motion.removeEventListener('change', update);
       window.removeEventListener('resize', update);
-      if (frame) cancelAnimationFrame(frame);
+      document.removeEventListener('visibilitychange', updateVisibility);
+      lenis?.off('scroll', onLenisScroll);
+      gsap.ticker.remove(raf);
+      window.clearTimeout(refresh);
       lenis?.destroy();
     };
-  }, [reducedMotion]);
+  }, []);
   if (!webgl) return <SceneFallback />;
   return (
     <div className="scene-canvas" aria-hidden="true">
       <Canvas
+        frameloop={pageVisible ? 'always' : 'never'}
         dpr={compact ? [0.7, 1] : [1, 1.5]}
+        performance={{ min: compact ? 0.45 : 0.62, debounce: 200 }}
         camera={{ position: [0, 0, 8], fov: 44, near: 0.1, far: 100 }}
         gl={{ antialias: !compact, alpha: true, powerPreference: compact ? 'low-power' : 'high-performance' }}
         fallback={<SceneFallback />}
