@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
+import ScrollScene from '@/components/ScrollScene';
 import NotFound from '@/pages/not-found';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
@@ -207,19 +208,32 @@ const navItems = [
   { label: 'CONTACT', target: 'contact' },
 ];
 
+const journeyWorlds = [
+  { number: '01', name: 'ENTRY' },
+  { number: '02', name: 'IDENTITY' },
+  { number: '03', name: 'WEB DEVELOPMENT' },
+  { number: '04', name: 'GRAPHIC DESIGN' },
+  { number: '05', name: 'VIDEO' },
+  { number: '06', name: 'CINEMATOGRAPHY' },
+  { number: '07', name: 'CONTENT' },
+  { number: '08', name: 'MARKETING' },
+  { number: '09', name: 'SELECTED WORK' },
+  { number: '10', name: 'CONTACT' },
+];
+
 function useSectionNavigation() {
   return (target: string) => document.getElementById(target)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function useSceneProgress() {
-  const [scene, setScene] = useState({ progress: 0, world: worlds[0] });
+  const [scene, setScene] = useState({ progress: 0, world: journeyWorlds[0] });
   useEffect(() => {
     let frame = 0;
     const update = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const progress = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-      const worldIndex = Math.min(worlds.length - 1, Math.max(0, Math.floor(progress * worlds.length)));
-      setScene({ progress, world: worlds[worldIndex] });
+       const worldIndex = Math.min(journeyWorlds.length - 1, Math.max(0, Math.floor(progress * journeyWorlds.length)));
+       setScene({ progress, world: journeyWorlds[worldIndex] });
       frame = 0;
     };
     const onScroll = () => { if (!frame) frame = window.requestAnimationFrame(update); };
@@ -232,11 +246,11 @@ function useSceneProgress() {
 }
 
 function LoadingReveal() {
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState(() => window.location.hash.length > 0 || window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   const [progress, setProgress] = useState(1);
   useEffect(() => {
     const startedAt = window.setTimeout(() => setProgress(100), 90);
-    const finishedAt = window.setTimeout(() => setDone(true), 1450);
+    const finishedAt = window.setTimeout(() => setDone(true), 720);
     return () => { window.clearTimeout(startedAt); window.clearTimeout(finishedAt); };
   }, []);
   return <div className={`loading-screen ${done ? 'is-done' : ''}`} aria-label="Loading Dev Fraol digital world">
@@ -263,9 +277,9 @@ function Cursor() {
   return <div className={`custom-cursor ${hovering ? 'is-hover' : ''}`} style={{ left: position.x, top: position.y }} />;
 }
 
-function WorldIndicator({ world, progress }: { world: World; progress: number }) {
+function WorldIndicator({ world, progress }: { world: { number: string; name: string }; progress: number }) {
   return <aside className="world-indicator" aria-live="polite" data-testid="status-current-world">
-    <strong>{world.number} / 06 — {world.name}</strong><span className="progress-rail"><i style={{ height: `${Math.round(progress * 100)}%` }} /></span>
+    <strong>{world.number} / 10 — {world.name}</strong><span className="progress-rail"><i style={{ height: `${Math.round(progress * 100)}%` }} /></span>
   </aside>;
 }
 
@@ -298,7 +312,7 @@ function Hero({ onMenu }: { onMenu: () => void }) {
     <div className="hero-grid" /><div className="hero-glow" /><div className="hero-orbit" />
     <div className="hero-sculpture" data-cursor="interactive" aria-label="Abstract futuristic floating core" role="img" />
     <div className="hero-corner left">DIGITAL CREATIVE / DEVELOPER / DESIGNER / FILMMAKER</div>
-    <div className="hero-corner right">SCROLL TO TRAVEL<br /><span className="cyan">01 — 06</span></div>
+     <div className="hero-corner right">SYSTEM 01 / DIGITAL UNIVERSE<br /><span className="cyan">SCROLL TO ENTER</span></div>
     <div className="hero-roles">DIGITAL CREATIVE<br />DEVELOPER<br />DESIGNER<br />FILMMAKER</div>
     <div className="hero-code">CORE / 00<br />SIGNAL / ACTIVE<br />GRID / INFINITE</div>
     <h1 className="hero-name" id="hero-title"><span>DEV</span><span>FRAOL</span></h1>
@@ -412,7 +426,7 @@ function Contact() {
     if (!name || !email || !message || !email.includes('@')) { setError('Please complete name, a valid email, and a message.'); setSent(false); return; }
     setError(''); setSent(true); form.reset();
   };
-  return <section className="section-wrap section-pad contact-section" id="contact" aria-labelledby="contact-title"><div className="contact-layout"><div><div className="eyebrow">Open channel / command center</div><h2 className="contact-title" id="contact-title">LET&apos;S BUILD SOMETHING <span className="cyan">IMPOSSIBLE TO IGNORE.</span></h2></div><div className="contact-aside"><p className="body-copy">Have a feeling, a frame, a product, or a story that needs a world around it? Start the signal below.</p><form className="contact-form" onSubmit={submit} noValidate><div className="field"><label htmlFor="name">Name</label><input id="name" name="name" autoComplete="name" placeholder="Your name" data-testid="input-contact-name" /></div><div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" placeholder="you@email.com" data-testid="input-contact-email" /></div><div className="field"><label htmlFor="project-type">Project Type</label><select id="project-type" name="project-type" defaultValue="" data-testid="select-contact-project"><option value="" disabled>Select a direction</option>{worlds.map((world) => <option key={world.id}>{world.name}</option>)}</select></div><div className="field"><label htmlFor="message">Message</label><textarea id="message" name="message" placeholder="Tell me what you are imagining." data-testid="textarea-contact-message" /></div>{error && <div className="form-error" role="alert" data-testid="status-contact-error">{error}</div>}{sent && <div className="form-success" role="status" data-testid="status-contact-success"><Check size={15} style={{ display: 'inline-block', marginRight: '.5rem' }} />Signal received. The rest starts with a conversation.</div>}<button type="submit" className="button-electric" data-testid="button-submit-contact">START A PROJECT <ArrowUpRight size={15} /></button></form><a className="button-secondary" href="#contact" data-testid="link-connect-dev">CONNECT WITH DEV <ArrowUpRight size={14} /></a></div></div></section>;
+  return <section className="section-wrap section-pad contact-section" id="contact" aria-labelledby="contact-title"><div className="contact-layout"><div><div className="eyebrow">Open channel / command center</div><h2 className="contact-title" id="contact-title">LET&apos;S<br />CREATE<br /><span className="cyan">SOMETHING</span><br /><span className="cyan">REMARKABLE.</span></h2></div><div className="contact-aside"><p className="body-copy">Have a feeling, a frame, a product, or a story that needs a world around it? Start the signal below.</p><form className="contact-form" onSubmit={submit} noValidate><div className="field"><label htmlFor="name">Name</label><input id="name" name="name" autoComplete="name" placeholder="Your name" data-testid="input-contact-name" /></div><div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" placeholder="you@email.com" data-testid="input-contact-email" /></div><div className="field"><label htmlFor="project-type">Project Type</label><select id="project-type" name="project-type" defaultValue="" data-testid="select-contact-project"><option value="" disabled>Select a direction</option>{worlds.map((world) => <option key={world.id}>{world.name}</option>)}<option>Branding</option><option>Other</option></select></div><div className="field"><label htmlFor="message">Message</label><textarea id="message" name="message" placeholder="Tell me what you are imagining." data-testid="textarea-contact-message" /></div>{error && <div className="form-error" role="alert" data-testid="status-contact-error">{error}</div>}{sent && <div className="form-success" role="status" data-testid="status-contact-success"><Check size={15} style={{ display: 'inline-block', marginRight: '.5rem' }} />Transmission sent locally. Thanks — the rest starts with a conversation.</div>}<button type="submit" className="button-electric" data-testid="button-submit-contact">START A PROJECT <ArrowUpRight size={15} /></button></form><div className="contact-connect"><span className="eyebrow">Connect</span><div className="contact-links"><a href="#contact" data-testid="link-connect-linkedin">LinkedIn</a><a href="#contact" data-testid="link-connect-github">GitHub</a><a href="#contact" data-testid="link-connect-instagram">Instagram</a><a href="#contact" data-testid="link-connect-youtube">YouTube</a></div></div></div></div></section>;
 }
 
 function Footer() {
@@ -435,9 +449,15 @@ function Home() {
   const navigate = useSectionNavigation();
   const scene = useSceneProgress();
   const activeModal = useMemo(() => Boolean(selectedProject || showreelOpen), [selectedProject, showreelOpen]);
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const frame = window.requestAnimationFrame(() => document.getElementById(hash)?.scrollIntoView({ block: 'start' }));
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
   useEffect(() => { document.body.style.overflow = menuOpen || activeModal ? 'hidden' : ''; return () => { document.body.style.overflow = ''; }; }, [menuOpen, activeModal]);
   useEffect(() => { const closeOnEscape = (event: KeyboardEvent) => { if (event.key === 'Escape') { setMenuOpen(false); setSelectedProject(null); setShowreelOpen(false); } }; window.addEventListener('keydown', closeOnEscape); return () => window.removeEventListener('keydown', closeOnEscape); }, []);
-  return <main className="site-shell" style={{ '--scene-progress': scene.progress } as CSSProperties}><LoadingReveal /><Cursor /><WorldIndicator world={scene.world} progress={scene.progress} /><Navigation onMenu={() => setMenuOpen(true)} />{menuOpen && <MenuOverlay onClose={() => setMenuOpen(false)} />}<Hero onMenu={() => setMenuOpen(true)} /><Intro /><AboutIntro /><SkillUniverse /><SelectedWork onSelect={setSelectedProject} /><Process /><Showreel onOpen={() => setShowreelOpen(true)} /><AboutSpace /><Philosophy /><Contact /><Footer />{selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}{showreelOpen && <ShowreelModal onClose={() => setShowreelOpen(false)} />}<button type="button" className="back-top" style={{ position: 'fixed', bottom: '1.25rem', right: '1.25rem', zIndex: 70, padding: '.7rem', background: 'rgba(5,8,16,.7)' }} onClick={() => navigate('top')} aria-label="Scroll to top" data-testid="button-floating-top"><ArrowUp size={15} /></button></main>;
+   return <main className="site-shell" style={{ '--scene-progress': scene.progress } as CSSProperties}><ScrollScene progress={scene.progress} /><LoadingReveal /><Cursor /><WorldIndicator world={scene.world} progress={scene.progress} /><Navigation onMenu={() => setMenuOpen(true)} />{menuOpen && <MenuOverlay onClose={() => setMenuOpen(false)} />}<div className="content-layer"><Hero onMenu={() => setMenuOpen(true)} /><Intro /><AboutIntro /><SkillUniverse /><SelectedWork onSelect={setSelectedProject} /><Process /><Showreel onOpen={() => setShowreelOpen(true)} /><AboutSpace /><Philosophy /><Contact /><Footer /></div>{selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}{showreelOpen && <ShowreelModal onClose={() => setShowreelOpen(false)} />}<button type="button" className="back-top" style={{ position: 'fixed', bottom: '1.25rem', right: '1.25rem', zIndex: 70, padding: '.7rem', background: 'rgba(5,8,16,.7)' }} onClick={() => navigate('top')} aria-label="Scroll to top" data-testid="button-floating-top"><ArrowUp size={15} /></button></main>;
 }
 
 function Router() {

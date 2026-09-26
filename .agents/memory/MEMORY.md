@@ -1,0 +1,1 @@
+- [Workspace package installs](workspace-package-installs.md) — target pnpm adds at the artifact package; workspace-root adds are rejected in this monorepo.

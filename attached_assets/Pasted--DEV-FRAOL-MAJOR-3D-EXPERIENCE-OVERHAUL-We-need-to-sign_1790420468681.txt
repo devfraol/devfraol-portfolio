@@ -1,0 +1,1354 @@
+# DEV FRAOL — MAJOR 3D EXPERIENCE OVERHAUL
+
+We need to significantly redesign and rebuild the current website.
+
+I have reviewed the current implementation.
+
+The current design has a good dark/electric-blue visual direction, but it still feels primarily like a **2D portfolio with futuristic styling**.
+
+That is NOT the final goal.
+
+We need to turn this into a genuine:
+
+# IMMERSIVE 3D INTERACTIVE DIGITAL EXPERIENCE
+
+The website must feel like a world that the visitor travels through.
+
+Do not simply add more gradients, glow, cards, or CSS animations.
+
+The next implementation must introduce a REAL scroll-driven 3D environment.
+
+---
+
+# CRITICAL REQUIREMENT
+
+## THE WEBSITE MUST HAVE REAL 3D SCROLL ANIMATION
+
+This is not optional.
+
+The current website does not visibly demonstrate a real 3D scroll experience.
+
+Fix this at the architecture level.
+
+Use:
+
+* Three.js
+* React Three Fiber
+* @react-three/drei
+* GSAP + ScrollTrigger OR Motion
+* smooth scrolling such as Lenis
+
+Create a persistent WebGL canvas that acts as the visual world of the website.
+
+The canvas should remain behind/integrated with the content while the user scrolls.
+
+Scrolling must control the 3D camera and scene.
+
+---
+
+# 01 — REAL 3D SCROLL ARCHITECTURE
+
+Do NOT create separate unrelated 3D objects for each section.
+
+Create ONE continuous 3D world.
+
+Concept:
+
+The visitor is physically traveling through a digital universe.
+
+The camera moves through the universe as the user scrolls.
+
+Example:
+
+WORLD 01
+HERO
+
+↓ scroll
+
+WORLD 02
+IDENTITY
+
+↓ scroll
+
+WORLD 03
+WEB DEVELOPMENT
+
+↓ scroll
+
+WORLD 04
+GRAPHIC DESIGN
+
+↓ scroll
+
+WORLD 05
+VIDEO
+
+↓ scroll
+
+WORLD 06
+CINEMATOGRAPHY
+
+↓ scroll
+
+WORLD 07
+CONTENT
+
+↓ scroll
+
+WORLD 08
+MARKETING
+
+↓ scroll
+
+WORLD 09
+SELECTED WORK
+
+↓ scroll
+
+WORLD 10
+CONTACT
+
+These should not feel like separate web sections.
+
+They should feel like locations inside the same 3D universe.
+
+---
+
+# 02 — CAMERA MUST ACTUALLY MOVE
+
+Implement a dedicated 3D camera controller.
+
+As scroll progress changes:
+
+* camera position changes
+* camera rotation changes
+* camera target changes
+* objects move relative to camera
+* scene lighting changes
+* depth changes
+* objects enter and leave the camera
+* environment changes
+
+For example:
+
+At the beginning:
+
+camera.position = near the hero object
+
+As the user scrolls:
+
+camera moves deeper into the environment
+
+At the Graphic Design world:
+
+camera moves around the design environment
+
+At Video:
+
+camera travels through floating film frames
+
+At Cinematography:
+
+camera moves toward a giant futuristic camera lens
+
+At Contact:
+
+camera arrives at the final command center
+
+This should be physically noticeable.
+
+---
+
+# 03 — MAKE THE 3D OBVIOUS
+
+The current implementation needs much stronger depth.
+
+Add:
+
+* large foreground objects
+* medium-distance objects
+* distant objects
+* atmospheric particles
+* depth-of-field
+* perspective
+* camera movement
+* volumetric-looking light
+* floating geometry
+* scale changes
+* objects passing near the camera
+
+The visitor should immediately understand:
+
+"Something is moving in 3D."
+
+Do NOT make the 3D object sit statically in the center.
+
+---
+
+# 04 — SIGNATURE 3D CORE
+
+Create a signature object for Dev Fraol.
+
+Name:
+
+**THE DEV CORE**
+
+This becomes the visual identity of the entire site.
+
+Create a complex futuristic 3D structure combining:
+
+* metallic geometry
+* transparent glass
+* glowing electric-blue energy
+* rings
+* particles
+* internal structures
+* thin light trails
+* small floating components
+
+It should look like a futuristic creative/technology engine.
+
+The object continuously evolves.
+
+### Hero
+
+The Core is compact.
+
+### Web Development
+
+The Core becomes a digital architecture.
+
+### Graphic Design
+
+The Core fragments into geometric design elements.
+
+### Video
+
+The Core becomes a timeline / film structure.
+
+### Cinematography
+
+The Core becomes a futuristic camera lens.
+
+### Content
+
+The Core becomes a media network.
+
+### Marketing
+
+The Core becomes a connected network of nodes.
+
+### Contact
+
+The Core becomes a glowing communication portal.
+
+This gives the entire website a visual story.
+
+---
+
+# 05 — HERO REBUILD
+
+The hero must be much more visually impressive.
+
+Do not create a standard hero.
+
+Use the full viewport.
+
+Background:
+
+deep black/navy 3D environment.
+
+Center:
+
+THE DEV CORE
+
+Typography:
+
+# DEV
+
+# FRAOL
+
+Use huge typography but integrate it with the 3D environment.
+
+Some text should be:
+
+* behind the Core
+* in front of the Core
+* partially hidden
+* moving through depth
+
+Add small technical labels:
+
+DIGITAL CREATIVE
+DEVELOPER
+DESIGNER
+FILMMAKER
+
+Add:
+
+`SYSTEM 01 / DIGITAL UNIVERSE`
+
+And:
+
+`SCROLL TO ENTER`
+
+The user should immediately know that scrolling controls the environment.
+
+---
+
+# 06 — HERO INTERACTION
+
+Mouse movement:
+
+The Core subtly follows the cursor.
+
+Camera reacts slightly.
+
+Lighting moves.
+
+Particles react.
+
+Text has subtle depth.
+
+Scroll:
+
+The Core rotates.
+
+Camera moves forward.
+
+The entire environment begins transforming.
+
+This is the first proof that the website is genuinely 3D.
+
+---
+
+# 07 — NEW NAVIGATION DESIGN
+
+The current navbar is too ordinary.
+
+Replace it.
+
+Do NOT use a traditional full-width rectangular navbar.
+
+Create a floating futuristic navigation system.
+
+Desktop:
+
+A compact floating glass/metal navigation capsule.
+
+Left:
+
+# DEV FRAOL
+
+Center:
+
+WORK
+SKILLS
+ABOUT
+CONTACT
+
+Right:
+
+**MENU**
+
+And a small electric-blue status indicator.
+
+The navigation should float slightly away from the edges.
+
+Use:
+
+* translucent dark glass
+* subtle blur
+* thin blue border
+* soft shadow
+* slight 3D depth
+
+On scroll, the navbar should subtly transform.
+
+Do not make it too tall.
+
+Do not make it look like a SaaS website.
+
+---
+
+# 08 — NAVIGATION INTERACTION
+
+When hovering a navigation item:
+
+* text shifts slightly
+* blue light appears
+* underline becomes a moving light beam
+* cursor reacts
+
+When clicking:
+
+Do not instantly jump.
+
+The camera should smoothly travel to that location in the 3D world.
+
+For example:
+
+Click WORK
+
+→ camera smoothly flies through the environment to the Work world.
+
+Click SKILLS
+
+→ camera travels to the Skill Universe.
+
+Click CONTACT
+
+→ camera travels to the Contact Command Center.
+
+Navigation should feel like controlling the 3D world.
+
+---
+
+# 09 — FULL-SCREEN MENU
+
+When MENU is clicked:
+
+Open a full-screen futuristic navigation environment.
+
+Dark background.
+
+Large typography:
+
+WORK
+SKILLS
+ABOUT
+SHOWREEL
+CONTACT
+
+Each item should have depth.
+
+Hovering an item should create a visual preview.
+
+Use smooth transitions.
+
+Do not use a basic dropdown menu.
+
+---
+
+# 10 — INTRODUCTION WORLD
+
+After the hero, create a massive typography moment.
+
+Show:
+
+# I BUILD.
+
+Then:
+
+# I DESIGN.
+
+Then:
+
+# I CREATE.
+
+Then:
+
+# I MAKE THINGS MOVE.
+
+Each statement appears at different depths.
+
+The camera moves between them.
+
+The typography should feel like physical objects inside the scene.
+
+---
+
+# 11 — ABOUT WORLD
+
+Create a 3D portrait environment.
+
+Do not simply put an image in a card.
+
+Create:
+
+* floating portrait
+* depth layers
+* image planes
+* blue lighting
+* particles
+* distortion
+* parallax
+* floating labels
+
+Around the portrait:
+
+DEVELOPER
+GRAPHIC DESIGNER
+VIDEOGRAPHER
+CINEMATOGRAPHER
+CONTENT CREATOR
+DIGITAL MARKETER
+
+These labels should float in 3D.
+
+---
+
+# 12 — SKILL UNIVERSE
+
+Create a major section:
+
+# THE SKILL UNIVERSE
+
+This must be one of the most impressive parts of the site.
+
+Each discipline becomes a physical 3D world.
+
+---
+
+## WORLD 01 — WEB DEVELOPMENT
+
+Visual environment:
+
+DIGITAL ARCHITECTURE
+
+Objects:
+
+* floating browser windows
+* code
+* UI panels
+* 3D interfaces
+* glowing nodes
+* digital structures
+
+Tools:
+
+HTML
+CSS
+JavaScript
+TypeScript
+React
+Next.js
+Tailwind CSS
+Node.js
+Express
+Supabase
+PostgreSQL
+Git
+GitHub
+VS Code
+Cursor
+
+Do not show fake proficiency percentages.
+
+Present tools as interactive 3D objects.
+
+---
+
+## WORLD 02 — GRAPHIC DESIGN
+
+Visual environment:
+
+THE VISUAL LAB
+
+Objects:
+
+* posters
+* typography
+* logos
+* color palettes
+* design boards
+* geometric objects
+
+Tools:
+
+Adobe Photoshop
+Adobe Illustrator
+Adobe InDesign
+Figma
+Canva
+
+Skills:
+
+Branding
+Visual Identity
+Poster Design
+Typography
+Layout Design
+Photo Manipulation
+Social Media Design
+UI Design
+
+---
+
+## WORLD 03 — VIDEO EDITING
+
+Visual environment:
+
+THE EDIT SUITE
+
+Objects:
+
+* floating editing timeline
+* video frames
+* film strips
+* waveforms
+* monitors
+* transitions
+
+Tools:
+
+Adobe Premiere Pro
+Adobe After Effects
+DaVinci Resolve
+CapCut
+
+Skills:
+
+Video Editing
+Motion Graphics
+Color Grading
+Visual Effects
+Sound Editing
+Short-form Video
+Storytelling
+
+---
+
+## WORLD 04 — CINEMATOGRAPHY
+
+Visual environment:
+
+THE CINEMATIC VOID
+
+Create a beautiful cinematic 3D environment.
+
+Use:
+
+* futuristic camera
+* lens
+* film strips
+* cinematic light
+* volumetric beams
+* depth of field
+* floating frames
+
+Skills:
+
+Camera Operation
+Composition
+Lighting
+Camera Movement
+Visual Storytelling
+Shot Planning
+Cinematic Direction
+
+Do NOT invent camera equipment or camera models.
+
+---
+
+## WORLD 05 — CONTENT CREATION
+
+Visual environment:
+
+THE CONTENT ENGINE
+
+Objects:
+
+* phones
+* vertical video
+* thumbnails
+* social content
+* cameras
+* floating media panels
+
+Tools:
+
+Premiere Pro
+After Effects
+Photoshop
+Illustrator
+Figma
+Canva
+CapCut
+
+Skills:
+
+Short-form Content
+Creative Direction
+Content Planning
+Visual Storytelling
+Thumbnail Design
+Brand Content
+
+---
+
+## WORLD 06 — SOCIAL MEDIA MARKETING
+
+Visual environment:
+
+THE NETWORK
+
+Create a giant connected 3D network.
+
+Nodes represent:
+
+Content
+Audience
+Brand
+Campaigns
+Platforms
+Community
+
+Skills:
+
+Social Media Strategy
+Content Strategy
+Campaign Planning
+Social Branding
+Audience Engagement
+Digital Marketing
+SEO
+
+Do not create fake analytics or fake results.
+
+---
+
+# 13 — TOOL OBJECT SYSTEM
+
+Build a reusable 3D component:
+
+`ToolNode`
+
+Each tool should have:
+
+name
+category
+description
+logo
+
+Example:
+
+Photoshop
+
+Graphic Design
+
+Professional image editing and visual design.
+
+Hovering:
+
+* node expands
+* blue glow
+* description appears
+* object rotates slightly
+
+Clicking:
+
+show a compact information panel.
+
+---
+
+# 14 — 3D SCROLL TRANSITIONS BETWEEN SKILLS
+
+This is critical.
+
+When leaving Web Development:
+
+the browser windows should fly past the camera.
+
+Then:
+
+Graphic Design objects emerge from the darkness.
+
+Leaving Graphic Design:
+
+posters and typography move into the distance.
+
+Video:
+
+film strips pass the camera.
+
+Cinematography:
+
+camera lens approaches.
+
+Content:
+
+phone screens fly into the environment.
+
+Marketing:
+
+thousands of connected nodes appear.
+
+This is what will make the scroll feel like a real 3D journey.
+
+---
+
+# 15 — WORK SECTION
+
+Create:
+
+# SELECTED WORK
+
+Do not use a standard grid.
+
+Create a spatial 3D gallery.
+
+Projects should exist at different depths.
+
+Example:
+
+Project A
+
+close foreground
+
+Project B
+
+medium depth
+
+Project C
+
+far background
+
+Scrolling moves the camera between them.
+
+---
+
+# 16 — PROJECT HOVER
+
+When hovering:
+
+project moves toward camera.
+
+Background becomes darker.
+
+Blue light surrounds the project.
+
+Project metadata appears.
+
+Cursor changes to:
+
+VIEW PROJECT
+
+Clicking:
+
+camera travels into the project.
+
+Open cinematic project detail page.
+
+---
+
+# 17 — SHOWREEL WORLD
+
+Create:
+
+# DEV FRAOL
+
+# SHOWREEL
+
+Full-screen cinematic environment.
+
+Large floating video plane.
+
+Surround it with:
+
+film frames
+camera elements
+light trails
+particles
+
+CTA:
+
+PLAY SHOWREEL
+
+Do not autoplay video with sound.
+
+---
+
+# 18 — CREATIVE PHILOSOPHY
+
+Create a dramatic sequence:
+
+# CODE.
+
+Camera moves.
+
+# DESIGN.
+
+Environment changes.
+
+# MOTION.
+
+Objects begin moving faster.
+
+# STORY.
+
+Everything converges.
+
+Then:
+
+# ONE VISION.
+
+This should feel like a cinematic title sequence.
+
+---
+
+# 19 — CONTACT PAGE REBUILD
+
+The current contact page is too cramped.
+
+The current design places the form on the far right while the giant headline consumes most of the screen.
+
+Do NOT keep that layout.
+
+Rebuild the Contact experience from scratch.
+
+---
+
+# CONTACT = FINAL 3D COMMAND CENTER
+
+Create a full-screen immersive 3D contact environment.
+
+The visitor has reached the final destination of the journey.
+
+Center:
+
+A glowing futuristic communication core.
+
+Around it:
+
+* floating blue particles
+* energy rings
+* subtle network lines
+* floating interface fragments
+* depth layers
+
+---
+
+# CONTACT TYPOGRAPHY
+
+Instead of the current oversized:
+
+"LET'S BUILD SOMETHING IMPOSSIBLE TO IGNORE."
+
+Use a more balanced composition.
+
+Main:
+
+# LET'S
+
+# CREATE
+
+# SOMETHING
+
+# REMARKABLE.
+
+Or:
+
+# HAVE AN IDEA?
+
+# LET'S BUILD IT.
+
+Make the typography large but leave enough space around it.
+
+Do not allow the headline to collide with the form.
+
+---
+
+# CONTACT FORM
+
+Create a large elegant form panel.
+
+Desktop:
+
+LEFT SIDE:
+
+large statement + 3D environment
+
+RIGHT SIDE:
+
+clean form
+
+But give the form enough width.
+
+Fields:
+
+NAME
+EMAIL
+PROJECT TYPE
+MESSAGE
+
+Button:
+
+**START A PROJECT →**
+
+Make the fields minimal.
+
+Use bottom borders rather than heavy boxes.
+
+Add subtle blue focus animation.
+
+---
+
+# CONTACT PROJECT TYPE
+
+Dropdown options:
+
+Web Development
+Graphic Design
+Video Editing
+Cinematography
+Content Creation
+Social Media Marketing
+Branding
+Other
+
+---
+
+# CONTACT SOCIAL AREA
+
+Below the form:
+
+CONNECT
+
+LinkedIn
+GitHub
+Instagram
+YouTube
+
+Use elegant text links.
+
+Do not use giant social cards.
+
+---
+
+# 20 — CONTACT 3D INTERACTION
+
+When the visitor focuses the Name field:
+
+the communication Core activates.
+
+When Email is focused:
+
+blue energy travels around the Core.
+
+When Message is focused:
+
+the environment becomes slightly brighter.
+
+When the form is successfully submitted:
+
+show a beautiful futuristic success animation.
+
+Example:
+
+TRANSMISSION SENT
+
+Then:
+
+"Thanks. I'll get back to you soon."
+
+Do not fake successful submission.
+
+Only show success after actual submission.
+
+---
+
+# 21 — FINAL FOOTER
+
+Keep the footer minimal.
+
+Large:
+
+DEV FRAOL
+
+Small:
+
+DIGITAL CREATIVE
+DEVELOPER
+DESIGNER
+FILMMAKER
+
+Then:
+
+© 2026 DEV FRAOL
+
+Back to top:
+
+↑ RETURN TO ORIGIN
+
+Clicking it should animate the camera back through the 3D universe to the hero.
+
+---
+
+# 22 — COLOR SYSTEM
+
+Main:
+
+#03060B
+
+#07111F
+
+#0B1C31
+
+Electric blue:
+
+#08A9FF
+
+Bright blue:
+
+#35C7FF
+
+White:
+
+#F4F8FF
+
+Muted:
+
+#8290A3
+
+Use blue as energy/light.
+
+Do not turn every component blue.
+
+---
+
+# 23 — 3D QUALITY
+
+Do not use primitive-looking demo geometry everywhere.
+
+Avoid a scene that looks like:
+
+"Three.js tutorial."
+
+The 3D should feel art-directed.
+
+Use combinations of:
+
+* bevelled geometry
+* glass materials
+* metallic materials
+* emissive materials
+* procedural particles
+* curves
+* tubes
+* floating planes
+* custom shader-like effects where practical
+
+Create depth.
+
+Create atmosphere.
+
+Create scale.
+
+---
+
+# 24 — CAMERA DEPTH
+
+Use multiple layers:
+
+FOREGROUND
+MIDGROUND
+BACKGROUND
+
+Objects should pass close to the camera.
+
+Some objects should be partially outside the viewport.
+
+This creates cinematic scale.
+
+---
+
+# 25 — SCROLL PROGRESS UI
+
+Add a small futuristic indicator.
+
+Example:
+
+`03 / 10`
+
+`VIDEO EDITING`
+
+Vertical line beside it.
+
+It updates dynamically as the camera moves through the world.
+
+---
+
+# 26 — PERFORMANCE
+
+Implement real performance controls.
+
+Detect:
+
+* mobile
+* low-end devices
+* reduced motion
+* WebGL capability
+
+On low-end devices:
+
+* lower particle count
+* lower DPR
+* simplify geometry
+* reduce post-processing
+
+But preserve the visual identity.
+
+---
+
+# 27 — IMPORTANT: DO NOT FAKE THE 3D
+
+Do NOT satisfy this request with:
+
+* CSS translateY
+* simple parallax
+* random floating cards
+* 2D background particles
+* section fade-ins
+
+Those can complement the 3D, but they cannot replace it.
+
+The site must have a persistent actual Three.js scene.
+
+The camera must respond to scroll.
+
+The environment must visibly change with scroll.
+
+---
+
+# 28 — TECHNICAL ACCEPTANCE TEST
+
+After implementation, manually test:
+
+### TEST 01
+
+Load the homepage.
+
+A real 3D scene is immediately visible.
+
+### TEST 02
+
+Move the mouse.
+
+The 3D environment responds.
+
+### TEST 03
+
+Scroll.
+
+The camera visibly moves through 3D space.
+
+### TEST 04
+
+Continue scrolling.
+
+Different skill environments appear.
+
+### TEST 05
+
+Reach Graphic Design.
+
+Photoshop, Illustrator, Figma, etc. appear as interactive tools.
+
+### TEST 06
+
+Reach Video.
+
+The environment changes into the editing world.
+
+### TEST 07
+
+Reach Cinematography.
+
+The environment becomes cinematic.
+
+### TEST 08
+
+Open navigation.
+
+The full-screen futuristic menu appears.
+
+### TEST 09
+
+Click Contact.
+
+The camera transitions to the Contact Command Center.
+
+### TEST 10
+
+Contact page.
+
+The form is spacious, balanced, readable, and visually integrated with the 3D environment.
+
+---
+
+# 29 — MOST IMPORTANT DESIGN RULE
+
+Do not make the website "more futuristic" by adding more glowing borders.
+
+Make it futuristic through:
+
+**SPACE**
+
+**DEPTH**
+
+**CAMERA**
+
+**MOTION**
+
+**LIGHT**
+
+**SCALE**
+
+**INTERACTION**
+
+**STORY**
+
+That is the difference between a futuristic-looking website and an actually immersive futuristic website.
+
+---
+
+# FINAL TARGET
+
+The visitor should feel:
+
+"I am not scrolling through a portfolio."
+
+They should feel:
+
+**"I am traveling through Dev Fraol's creative universe."**
+
+The journey should be:
+
+ENTRY
+↓
+IDENTITY
+↓
+CODE
+↓
+DESIGN
+↓
+MOTION
+↓
+CINEMATOGRAPHY
+↓
+CONTENT
+↓
+MARKETING
+↓
+WORK
+↓
+CONTACT
+
+The final experience must be:
+
+**FUTURISTIC**
+**3D**
+**CINEMATIC**
+**IMMERSIVE**
+**EXTROVERTED**
+**CREATIVE**
+**TECHNICAL**
+**PREMIUM**
+**MEMORABLE**
+
+Do not stop after changing the styling.
+
+Refactor the architecture where necessary so the 3D experience is genuinely integrated into the website.
+
+After implementation, test the actual scroll-driven 3D behavior and verify that it is visibly working on desktop.
