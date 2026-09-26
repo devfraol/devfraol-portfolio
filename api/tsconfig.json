@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "types": ["node"],
+    "typeRoots": ["../artifacts/api-server/node_modules/@types"]
+  },
+  "include": ["[...path].ts"],
+  "references": [
+    { "path": "../lib/db" },
+    { "path": "../lib/api-zod" }
+  ]
+}
