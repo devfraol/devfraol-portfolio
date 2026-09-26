@@ -1,4 +1,5 @@
 {
+  "framework": "vite",
   "buildCommand": "pnpm run build",
   "outputDirectory": "artifacts/dav-fraol-portfolio/dist/public",
   "rewrites": [
