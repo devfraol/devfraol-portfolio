@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://devfraol.com/sitemap.xml
-Allow: /
+Sitemap: https://devfraol.com.et/sitemap.xml
