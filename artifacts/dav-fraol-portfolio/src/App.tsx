@@ -342,7 +342,8 @@ function AboutIntro() {
       <div className="about-copy">
         <div className="eyebrow">The person behind the work / 00</div>
         <h2 id="about-title">DEV FRAOL.<br /><span className="cyan">DIGITAL</span><br />CREATIVE &amp;<br />DEVELOPER.</h2>
-        <p className="body-copy">Dev Fraol works across technology, visual design, motion, cinematography, content creation, and digital marketing. These disciplines are connected by one point of view: make the work feel alive.</p>
+        <p className="body-copy">Fraol Belachew, known professionally as Dev Fraol, works across web development, graphic design, video editing, cinematography, content creation, and digital marketing. These disciplines are connected by one point of view: make the work feel alive.</p>
+        <div className="about-links" aria-label="Explore Dev Fraol's portfolio"><a href="#skills">Explore creative disciplines</a><a href="#work">View selected projects</a><a href="#contact">Discuss a project</a></div>
         <div className="about-meta"><div><span className="meta-label">Approach</span><span className="meta-value">Curious / precise / visual</span></div><div><span className="meta-label">Working across</span><span className="meta-value">Code / design / motion / story</span></div></div>
       </div>
     </div>

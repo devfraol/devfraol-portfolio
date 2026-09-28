@@ -170,6 +170,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .portrait-core::after { content: 'DIGITAL\\A CREATIVE'; white-space: pre; position: absolute; left: 16%; bottom: 10%; color: var(--blue); font: .6rem/1.5 var(--app-font-mono); letter-spacing: .18em; }
 .about-copy h2 { margin-top: 1.5rem; font: 800 clamp(2.7rem, 5vw, 5.8rem)/.88 var(--display); letter-spacing: -.07em; }
 .about-copy p { max-width: 32rem; margin-top: 1.8rem; font-size: 1rem; }
+.about-links { display: flex; flex-wrap: wrap; gap: .75rem 1.25rem; margin-top: 1.5rem; }.about-links a { color: var(--blue); font: .62rem var(--app-font-mono); letter-spacing: .12em; text-transform: uppercase; }.about-links a:hover { color: var(--ice); }
 .about-meta { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid rgba(237,247,255,.13); }
 .meta-label { display: block; margin-bottom: .5rem; color: var(--blue); font: .57rem var(--app-font-mono); letter-spacing: .15em; text-transform: uppercase; }
 .meta-value { color: rgba(237,247,255,.8); font-size: .82rem; }
